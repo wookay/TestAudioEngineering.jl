@@ -1,0 +1,17 @@
+name = "TestAudioEngineering"
+uuid = "e43c07c0-6fc9-4c5d-b549-e96554f4303d"
+authors = ["WooKyoung Noh <wookay.noh@gmail.com>"]
+version = "0.1.0"
+
+[compat]
+Jive = "0.3"
+WaveFlow = "1.0"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+Jive = "ba5e3d4b-8524-549f-bc71-e76ad9e9deed"
+WaveFlow = "d8840e3d-a7fc-463d-bc34-4e391df193a6"
+
+[targets]
+test = ["Test", "Pkg", "Jive", "WaveFlow"]
