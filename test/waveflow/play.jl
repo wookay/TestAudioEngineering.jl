@@ -25,7 +25,7 @@ end
     @test audio_seconds(snd2) ≈ 1.0
 end
 
-const relaxing_seconds = 0.8
+const relaxing_seconds = 1.0
 
 @testset "WaveFlow" begin
     @testset "Audio loading" begin
@@ -54,7 +54,9 @@ const relaxing_seconds = 0.8
         play!(snd1)
         play!(snd2)
 
-        sleep(maximum((snd1_seconds, snd2_seconds)) + relaxing_seconds)
+        sleep(maximum((snd1_seconds, snd2_seconds)))
+
+        sleep(relaxing_seconds)
 
         close!(sys)
     end
